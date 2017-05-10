@@ -5,7 +5,7 @@ class Api::PokemonController < ApplicationController
   end
 
   def show
-    @pokemon = Pokemon.find_by(id: params[:id])
+    @pokemon = Pokemon.includes(:items).find_by(id: params[:id])
     render :show
   end
 
