@@ -57,7 +57,7 @@ ul {
     list-style: none;
     &:hover img {
       position: absolute;
-
+      filter: drop-shadow( -2px 3px 5px #000);
       margin:  0 30px;
       transform: scale(1.5) !important;
       width: 55px;
