@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 import ItemDetailContainer from './item_detail_container';
 
 class PokemonDetail extends React.Component {
@@ -27,9 +27,9 @@ class PokemonDetail extends React.Component {
     if (pokemonDetail.items) {
       items = pokemonDetail.items.map((item) => (
         <li key={item.id}>
-          <Link to={`/pokemon/${this.props.match.params.pokemonId}/item/${item.id}`}>
+          <NavLink to={`/pokemon/${this.props.match.params.pokemonId}/item/${item.id}`}>
             <img src={item.image_url} alt="item"/>
-          </Link>
+          </NavLink>
         </li>
       ));
     } else {
@@ -49,11 +49,13 @@ class PokemonDetail extends React.Component {
         <section className="pokemonDetailItemsWrapper">
           <h3>Items</h3>
           <ul className="pokemonDetailItems">
-            {items}
-          </ul>
-          <Route path="/pokemon/:pokemonId/item/:itemId"
-            component={ItemDetailContainer}
-          />
+            <div className="pokemon-items">
+              {items}
+            </div>
+            <Route path="/pokemon/:pokemonId/item/:itemId"
+              component={ItemDetailContainer}
+            />
+        </ul>
         </section>
       </section>
     );

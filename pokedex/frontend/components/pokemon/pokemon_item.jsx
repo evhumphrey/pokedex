@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class PokemonItem extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class PokemonItem extends React.Component {
     const { hover } = this.state;
     return(
       <li onMouseEnter={this.hoverHandler} onMouseLeave={this.hoverHandler}>
-        <Link to={`/pokemon/${poke.id}`}>
+        <NavLink to={`/pokemon/${poke.id}`}>
           {poke.id}
           <img
             className={ hover ? "animated rubberBand" : "" }
@@ -31,7 +31,7 @@ class PokemonItem extends React.Component {
           >
             {poke.name}
           </span>
-        </Link>
+        </NavLink>
       </li>
     );
   }
