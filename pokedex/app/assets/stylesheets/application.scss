@@ -49,6 +49,15 @@ ul {
     text-rendering: optimizeLegibility;
     height: 43px;
 
+    a {
+      width: 100%;
+      height: 55px;
+      display: inherit;
+      align-items: inherit;
+      text-decoration: none;
+      color: inherit;
+    }
+
     img {
       width: 43px;
       height: 43px;

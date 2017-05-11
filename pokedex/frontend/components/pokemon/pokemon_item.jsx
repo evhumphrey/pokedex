@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class PokemonItem extends React.Component {
   constructor(props) {
@@ -8,7 +9,6 @@ class PokemonItem extends React.Component {
   }
 
   hoverHandler() {
-    console.log(this.state.hover);
     this.setState({
       hover: !this.state.hover
     });
@@ -19,7 +19,19 @@ class PokemonItem extends React.Component {
     const { hover } = this.state;
     return(
       <li onMouseEnter={this.hoverHandler} onMouseLeave={this.hoverHandler}>
-        {poke.id} <img className={ hover ? "animated rubberBand" : "" } src={poke.image_url} alt={poke.name} /> <span className={ hover ? "animated fadeInLeft poke-name" : "poke-name" }>{poke.name}</span>
+        <Link to={`/pokemon/${poke.id}`}>
+          {poke.id}
+          <img
+            className={ hover ? "animated rubberBand" : "" }
+            src={poke.image_url}
+            alt={poke.name}
+          />
+          <span
+            className={ hover ? "animated fadeInLeft poke-name" : "poke-name" }
+          >
+            {poke.name}
+          </span>
+        </Link>
       </li>
     );
   }
