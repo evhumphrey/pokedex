@@ -38,59 +38,6 @@ header {
   }
 }
 
-// ul {
-//   padding: 0;
-//   li {
-//     position: relative;
-//     padding-left: 20px;
-//     display: flex;
-//     align-items: center;
-//     transition: all 0.2s;
-//     text-rendering: optimizeLegibility;
-//     height: 43px;
-//
-//     a {
-//       width: 100%;
-//       height: 55px;
-//       display: inherit;
-//       align-items: inherit;
-//       text-decoration: none;
-//       color: inherit;
-//     }
-//
-//     img {
-//       width: 43px;
-//       height: 43px;
-//       margin: auto 5px;
-//     }
-//     list-style: none;
-//     &:hover img {
-//       position: absolute;
-//       filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.7));
-//       margin:  0 30px;
-//       width: 55px;
-//       height: 55px;
-//       transition: all 1s;
-//       z-index: 1000;
-//     }
-//     &:hover {
-//       // background-color: $red;
-//       padding-left: 30px;
-//       cursor: pointer;
-//       transition: all 1s;
-//       box-shadow: 0px 5px 4px -3px #e2e1e1;
-//       background-color: #FF836C;
-//       color: #fff;
-//       font-weight: bold;
-//     }
-//     &:hover .poke-name {
-//       margin-left: 100px;
-//       animation-duration: 1s;
-//       // transition: all 5.1s !important;
-//       z-index: 1000;
-//     }
-//   }
-// }
 
 nav {
   width: 900px;
